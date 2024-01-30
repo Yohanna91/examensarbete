@@ -32,6 +32,20 @@ Nu kan du öppna butik applikationen på
 Servern körs på
 **localhost:3000**
 
-### Övrigt
+## Obligatoriska moment som jag valt (3st)
 
-- Om du vill testa med din egna Stripe account. Ändra `publishable_key` i projektet till din egna.
+- En egendesignat databas med minst två tabeller. Ska vara normaliserad till lämplig nivå och lämpliga constraints i form av foreign keys etc. används.
+
+_MongoDB databas består utav 2 tabeller (Users & Orders)_
+
+- Koppling till en betallösning
+
+_Projektet använder Stripe för betallösningar_
+
+- Routing och snygga url:er. Alla anrop går via en dispatcher (index.php) och controllers hanterar url-strukturen. Eller liknande, inga anrop till specifika .php-filer.
+
+_React router dom hantering av URL:er och i server används express med params för att hantera unika URL:er_
+
+- Inloggning via OAuth, Google eller liknande tillämpas.
+
+_Implementerat inloggning från grund i Express där lösenordhantering görs med bcrypt och användare sparas och hämtas från MongoDB atlas moln databas_
